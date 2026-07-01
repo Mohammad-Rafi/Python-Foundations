@@ -1,0 +1,42 @@
+⚡ Flash Notes: Variables in Python
+
+- Definition: A variable is a name (label) that refers to an object in memory.
+- Binding: Assigning a value to a variable (x = 10) binds the name x to the object 10.
+- Rebinding: Reassigning (x = 20) makes x point to a new object.
+
+Rules & Basics:
+- No explicit declaration needed → created on assignment.
+- Names can include letters, digits, underscore (_) but not start with a digit.
+- Case-sensitive (Name ≠ name).
+- Reserved keywords cannot be variable names.
+
+Types:
+- int → whole numbers
+- float → decimals
+- str → text
+- list → ordered mutable collection
+- tuple → ordered immutable collection
+- dict → key-value pairs
+- bool → True/False
+- NoneType → absence of value
+
+Mutability:
+- Mutable objects (list, dict, set) can be changed in place.
+- Immutable objects (int, str, tuple) cannot be changed; rebinding creates new objects.
+
+Multiple Assignments:
+- a = b = 5        # both point to same int
+- x, y = 1, 2      # tuple unpacking
+
+Checking Types:
+- type(x)          # returns type of object
+- isinstance(x, int)  # checks if x is an int
+
+Scope:
+- Local → inside a function
+- Global → outside functions
+- Nonlocal → in nested functions
+
+✅ Takeaway:
+Variables in Python are labels for objects, not boxes storing values.
+Binding and rebinding simply change which object a name points to.
