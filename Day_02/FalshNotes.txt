@@ -1,0 +1,122 @@
+⚡ Flash Notes – Concepts by Category ~ Input/Output Operations
+
+- Multi-line Input
+  - Use a loop until an empty line is entered.
+  - Stores multiple lines in a list.
+
+- sys.stdin
+  - Used for reading input directly from standard input stream.
+  - Useful for bulk/multi-line input.
+
+
+📤 Output Operations
+- print() function
+  - Displays output to console.
+  - Accepts multiple arguments.
+  - Parameters:
+    - sep → custom separator between values.
+    - end → custom ending string.
+    - file → redirect output to a file.
+
+- Formatting Output
+  - f-strings → modern, clean formatting.
+    Example: print(f"Pi = {3.14159:.2f}")
+
+  - format() method → older but flexible.
+    Example: "Name: {}, Age: {}".format(name, age)
+
+  - Alignment and width specifiers for tables.
+    🔹 Alignment Options
+        - <  → Left align
+        - >  → Right align
+        - ^  → Center align
+
+    🔹 Width Specifiers
+        - Define minimum width of the field.
+        - Example: :<10 → left align in a space of 10 characters.
+        - If content is shorter, spaces are added automatically.
+
+
+📂 File Input/Output
+- Opening Files
+  - open(filename, mode)
+  - Modes:
+    - "r" → read
+    - "w" → write (overwrite)
+    - "a" → append
+    - "b" → binary
+    - "r+" → read & write
+
+- Reading Files
+  - file.read() → entire file
+  - file.readline() → one line
+  - file.readlines() → list of lines
+
+- Writing Files
+  - file.write("text") → writes string to file
+
+- Closing Files
+  - file.close() → manually close file
+  - with open(...) as f: → auto-closes file
+
+- Redirecting Output
+  - print("Hello", file=f) → writes directly to file
+
+
+🧮 Expression Evaluation
+- eval() function
+  - Evaluates a string as a Python expression.
+  - Use with caution → security risks.
+  - Safe usage: restrict builtins.
+  - Example:
+    expr = input("Enter math expression: ")
+    result = eval(expr, {"__builtins__": None}, {})
+
+
+🔑 Key Points Recap
+- Input is always string → convert if needed.
+- print() can be customized with sep, end, file.
+- Use f-strings for modern formatting.
+- File I/O requires open/close; prefer with for safety.
+- eval() should be sandboxed for security.
+
+
+---------------------------------------------------------------
+                | Important |
+---------------------------------------------------------------
+
+🖥️ Basic Input & Output
+P1 → Multiple inputs with input()
+Concept: Read separate values and print them together.
+
+P2 → Numeric input & arithmetic
+Concept: Convert strings to numbers (int(), float()) before math.
+
+📑 String Processing
+P3 → Splitting input strings
+Concept: Use .split() to break input into parts, then convert to list.
+
+🖨️ Print Formatting
+P4 → Custom separators & endings
+Concept: Control print() with sep and end.
+
+P6 → f-string formatting
+Concept: Format numbers with precision (:.2f).
+
+P8 → Table formatting
+Concept: Align text with width specifiers (:<width).
+
+📥 Multi-line Input
+P5 → Loop until empty line
+Concept: Collect multiple lines into a list, count them.
+
+P7 → Using sys.stdin
+Concept: Read fixed number of lines directly from standard input.
+
+📂 File I/O
+P9 → Redirecting output to file
+Concept: Use print(..., file=f) to write directly into a file.
+
+🧮 Expression Evaluation
+P10 → Safe evaluation with eval()
+Concept: Evaluate math expressions with restricted environment.
