@@ -1,0 +1,49 @@
+---
+
+if-else-elif Statements
+
+Conditional statements are the primary mechanism in Python for decision-making. They allow your program to execute specific blocks of code based on whether certain conditions are met.
+
+1. Key Properties and Purpose  
+- if: The entry point. Evaluates a boolean expression. If True, the indented block executes.  
+- elif: Stands for "else if." Evaluated only if the preceding if (or elif) conditions were False. Multiple elif blocks allowed.  
+- else: The "catch-all" block. Executes only if all preceding if and elif conditions were False. Optional.  
+
+Component | Execution Trigger | Frequency  
+if        | Condition is True | Once (always checked)  
+elif      | Previous conditions False AND this condition True | Zero or many  
+else      | All previous conditions False | Zero or one  
+
+2. Common Flaws and Mistakes  
+- Misunderstanding Truthiness: Non-zero numbers, non-empty strings/lists → True. 0, None, "", empty list/dict → False.  
+- Indentation Errors: Python uses indentation, not braces. Wrong indentation causes errors.  
+- Overlapping Conditions: Only the first True condition executes. Ensure ranges are mutually exclusive.  
+- Missing Colon: Forgetting ":" at the end of if/elif/else is a common syntax error.  
+
+3. Limitations and Boundaries  
+- Linear Evaluation: Chains are checked top to bottom (O(N)).  
+- Verbosity: Long chains can be hard to read. For many discrete values, use dictionary lookup or match-case (Python 3.10+).  
+- Statement vs Expression: if-elif-else is a statement, not usable directly inside expressions.  
+
+4. Code Example  
+```
+score = 85
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")  # Executes for 85
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: F")
+```
+
+---
+
+Revision Summary  
+- Structure: Keep indentation consistent.  
+- Logic: Use if for the first condition, elif for alternatives, else for default.  
+- Refinement: If chain exceeds 4–5 branches, consider dictionary lookup or match-case for readability.  
+
+--- 
