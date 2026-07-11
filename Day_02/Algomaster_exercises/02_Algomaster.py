@@ -20,6 +20,5 @@ product_c = "Monitor"
 
 print(f"{product_a} {product_b} {product_c}")
 print(product_a,product_b,product_c, sep=", ")
-print(product_a,product_b,product_c, sep=", ")
 print(product_a,product_b,product_c, sep=" | ")
 print(product_a,product_b,product_c, sep="\n")
